@@ -24,9 +24,13 @@ public class EnemyHandler : MonoBehaviour
     // Events
     public UnityEvent OnDestroyEvent;
     
+    // Move Pattern
+    public List<MovePattern> Patterns;
+    
     private void Start()
     {
         attackTimer = attackTimerMax;
+        StartCoroutine(MovePatternRoutine());
     }
     
     private void Update()
@@ -70,5 +74,51 @@ public class EnemyHandler : MonoBehaviour
     private void OnDestroy()
     {
         OnDestroyEvent.Invoke();
+    }
+
+    IEnumerator MovePatternRoutine()
+    {
+        while (this.gameObject != null)
+        {
+            foreach (var pattern in Patterns)
+            {
+                PatternCommand command = null;
+                switch (pattern)
+                {
+                    case MovePattern.MoveHorizontal:
+                    {
+                        command = MoveService.GetMoveHorizontalPattern(this.transform.position);
+                        break;
+                    }
+                    case MovePattern.MovePosition:
+                    {
+                        command = MoveService.GetMovePattern(this.transform.position);
+                        break;
+                    }
+                    case MovePattern.Stop:
+                    {
+                        command = MoveService.GetStopPattern(this.transform.position);
+                        break;
+                    }
+                }
+                Debug.Log("[Command] position:" + command.pos);
+
+                StartCoroutine(MoveToPosition(command.pos, command.duration));
+                yield return new WaitForSeconds(command.duration);
+            }
+        }
+    }
+
+    IEnumerator MoveToPosition(Vector3 position, float duration)
+    {
+        float timer = duration;
+        while (timer > 0)
+        {
+            float interpolate = Time.deltaTime / duration;
+            Debug.Log("[Interpolate] interpolate:" + interpolate);
+            this.transform.position = Vector3.Lerp(transform.position, position, interpolate);
+            timer -= Time.deltaTime;
+            yield return null;
+        }
     }
 }
