@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class PlayerManager : Singleton<PlayerManager>
 {
     // 내부 변수
-    private int numOfBullets;
+    public int numOfBullets;
     private uint HP;
     public uint maxHP;
     public uint hp
@@ -54,6 +54,14 @@ public class PlayerManager : Singleton<PlayerManager>
     public float shotDelayMax;
     private float shotDelay;
     
+    // Player Bullet Sapwner
+    public BulletSpawner _BulletSpawner;
+    
+    // Player 발사 각도
+    public List<Quaternion> Quaternions;
+    
+    // Player 발사 반복 횟수
+    public int iterTime;
     public PlayerState _currentState
     {
         set
@@ -84,7 +92,7 @@ public class PlayerManager : Singleton<PlayerManager>
         stateChangeDelay = 0f;
         shotDelay = 0f;
         numOfBullets = 0;
-        
+        hp = maxHP;
         
         Debug.Log("Game Ready");
     }
@@ -143,7 +151,8 @@ public class PlayerManager : Singleton<PlayerManager>
                 else if (_currentState._stateName.Equals("DefenceState"))
                 {
                     // 방어 상태인 경우
-                    numOfBullets++;
+                    ++numOfBullets;
+                    Debug.Log(numOfBullets);
                 }
             }
             Destroy(other.gameObject);
@@ -156,7 +165,7 @@ public class PlayerManager : Singleton<PlayerManager>
     
     private void Shoot()
     {
-        // TODO 탄환 스포너에서 물체 발사
+        _BulletSpawner.BulletSpawn(this.transform.position, Quaternions, iterTime);
         Debug.Log("플레이어 총알 발사!");
         shotDelay = shotDelayMax;
     }

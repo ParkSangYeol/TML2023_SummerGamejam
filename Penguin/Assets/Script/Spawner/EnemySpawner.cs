@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
-{
-    public GameObject Enemy;
+{    
+    public EnemyContainer _EnemyContainer;
+    public BulletSpawner _BulletSpawner;
     int count = 0;
     // Start is called before the first frame update
     void Start()
     {
-
+        StartCoroutine(CreateEnemyRoutine());
     }
 
     // Update is called once per frame
@@ -19,6 +20,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     private bool stopTrigger = true;
+    
     IEnumerator CreateEnemyRoutine()
     {
         while (stopTrigger)
@@ -32,7 +34,8 @@ public class EnemySpawner : MonoBehaviour
     {
         Vector3 pos = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.0f, 1.0f), 1.1f, 0));
         pos.z = 0.0f;
-        Instantiate(Enemy, pos, Quaternion.identity);
+        var spawnObj = Instantiate(_EnemyContainer.GetRandomEnemy(), pos, Quaternion.identity);
+        spawnObj.GetComponent<EnemyHandler>().bulletSpawner = _BulletSpawner;
         count++;
     }
 }
