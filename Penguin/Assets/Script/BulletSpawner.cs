@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class BulletSpawner : MonoBehaviour
 {
-    public GameObject Bullet;
-    public Transform bulletSpawnPoint;
+    public BulletContainer container;
 
     // Start is called before the first frame update
     void Start()
@@ -19,9 +18,9 @@ public class BulletSpawner : MonoBehaviour
 
     }
     
-    public void BulletSpawn()
+    public void BulletSpawn(Vector3 spawnPos)
     {
-        var bulletGo = Instantiate(Bullet);
-        bulletGo.transform.position = this.bulletSpawnPoint.position;
+        var bulletGo = Instantiate(container.GetRandomBullet());
+        bulletGo.transform.position = spawnPos;
     }
 }

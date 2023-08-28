@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Pool;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -28,6 +27,7 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(3.0f);
         }
     }
+
     public void EnemySpawn()
     {
         Vector3 pos = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.0f, 1.0f), 1.1f, 0));
