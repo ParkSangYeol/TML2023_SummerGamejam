@@ -132,7 +132,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag.Equals("Bullet"))
+        if (other.tag.Equals("EnemyBullet"))
         {
             if (_currentState._isGetDamage)
             {

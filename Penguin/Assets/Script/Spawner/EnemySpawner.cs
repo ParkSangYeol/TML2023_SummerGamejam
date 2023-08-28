@@ -6,6 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {    
     public EnemyContainer _EnemyContainer;
     public BulletSpawner _BulletSpawner;
+    public int maxCount;
     int count = 0;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,10 @@ public class EnemySpawner : MonoBehaviour
     {
         while (stopTrigger)
         {
-            EnemySpawn();
+            if (count < maxCount)
+            {
+                EnemySpawn();
+            }
             yield return new WaitForSeconds(3.0f);
         }
     }
@@ -35,7 +39,12 @@ public class EnemySpawner : MonoBehaviour
         Vector3 pos = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.0f, 1.0f), 1.1f, 0));
         pos.z = 0.0f;
         var spawnObj = Instantiate(_EnemyContainer.GetRandomEnemy(), pos, Quaternion.identity);
-        spawnObj.GetComponent<EnemyHandler>().bulletSpawner = _BulletSpawner;
+        EnemyHandler handler = spawnObj.GetComponent<EnemyHandler>();
+        handler.bulletSpawner = _BulletSpawner;
+        handler.OnDestroyEvent.AddListener(() =>
+        {
+            count--;
+        });
         count++;
     }
 }

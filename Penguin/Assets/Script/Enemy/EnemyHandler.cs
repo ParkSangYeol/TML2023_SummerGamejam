@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyHandler : MonoBehaviour
 {
@@ -17,11 +18,14 @@ public class EnemyHandler : MonoBehaviour
     // 발사 각도
     public List<Quaternion> quaternions;
 
+    // Events
+    public UnityEvent OnDestroyEvent;
+    
     private void Start()
     {
         attackTimer = attackTimerMax;
     }
-
+    
     private void Update()
     {
         if (attackTimer < 0)
@@ -32,16 +36,36 @@ public class EnemyHandler : MonoBehaviour
         attackTimer -= Time.deltaTime;
     }
 
-    public void DestroyEnemy()
+    private void OnTriggerEnter(Collider other)
     {
-        if(health <= 0)
+        if (other.tag.Equals("PlayerBullet"))
         {
-            Destroy(gameObject);
+            Damaged(other.GetComponent<BulletHandler>().damage);
+            Destroy(other.gameObject);
         }
     }
 
+    public void DestroyEnemy()
+    {
+        Destroy(gameObject);
+    }
+
+    private void Damaged(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            DestroyEnemy();
+        }
+    }
+    
     public void Shoot()
     {
         bulletSpawner.BulletSpawn(this.transform.position, quaternions, iterTime);
+    }
+
+    private void OnDestroy()
+    {
+        OnDestroyEvent.Invoke();
     }
 }

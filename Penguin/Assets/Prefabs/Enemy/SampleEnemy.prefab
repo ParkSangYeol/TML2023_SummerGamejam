@@ -93,7 +93,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6172436717531998213}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -110,9 +110,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6ff2e72bbbe9d438fc2a867b9ca33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 1
   attackTimerMax: 2
   attackTimer: 0
+  bulletSpawner: {fileID: 0}
   iterTime: 1
   quaternions:
   - {x: 0, y: 0, z: 0, w: 0}
+  OnDestroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
