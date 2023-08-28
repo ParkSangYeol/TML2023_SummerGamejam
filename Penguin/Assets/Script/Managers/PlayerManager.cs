@@ -22,7 +22,7 @@ public class PlayerManager : Singleton<PlayerManager>
                     HP = value;
                 }
 
-                if (value == 0)
+                if (value < 0)
                 {
                     _onDeadEvent.Invoke();
                 }
@@ -146,7 +146,7 @@ public class PlayerManager : Singleton<PlayerManager>
                     numOfBullets++;
                 }
             }
-            Destroy(other);
+            Destroy(other.gameObject);
         }
     }
 
