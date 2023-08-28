@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ef6621107450ce4db5b4e51c05d0bb1, type: 3}
-  m_Name: EnemyData
+  m_Name: PenguinKnight_Data
   m_EditorClassIdentifier: 
   Enemy: {fileID: 6172436717531998213, guid: 9664d7a567a0b20498331e28d3039854, type: 3}
   prob: 1
