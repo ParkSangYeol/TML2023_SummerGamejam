@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PosionFish
   m_EditorClassIdentifier: 
   Bullet: {fileID: 8003041633358554558, guid: 00d0a88e1b56c4049856a77b888ab214, type: 3}
-  prob: 15
+  prob: 10

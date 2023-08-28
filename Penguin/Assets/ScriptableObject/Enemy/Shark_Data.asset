@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Shark_Data
   m_EditorClassIdentifier: 
   Enemy: {fileID: 6172436717531998213, guid: a8b700b2dae9b964f95b209c08510794, type: 3}
-  prob: 1
+  prob: 20
+  point: 16

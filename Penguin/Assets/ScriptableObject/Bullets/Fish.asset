@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Fish
   m_EditorClassIdentifier: 
   Bullet: {fileID: 8003041633358554558, guid: bfd7c2ff95c1bd549a15c729e8fd75ad, type: 3}
-  prob: 85
+  prob: 90

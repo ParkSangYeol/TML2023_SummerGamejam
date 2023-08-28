@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Octopus_Data
   m_EditorClassIdentifier: 
   Enemy: {fileID: 6172436717531998213, guid: 3d3fbfb5b14a9794ba671130445d31b0, type: 3}
-  prob: 1
+  prob: 30
+  point: 13
