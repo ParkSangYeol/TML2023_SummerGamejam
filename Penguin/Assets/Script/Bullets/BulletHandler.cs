@@ -7,7 +7,7 @@ public class BulletHandler : MonoBehaviour
 {
     public float speed;
     public int damage;
-    public bool isPosion;
+    public bool isPoison;
 
     private void Update()
     {

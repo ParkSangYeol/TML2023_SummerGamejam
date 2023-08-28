@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,9 +9,9 @@ public class PlayerManager : Singleton<PlayerManager>
 {
     // 내부 변수
     public int numOfBullets;
-    private uint HP;
-    public uint maxHP;
-    public uint hp
+    private int HP;
+    public int maxHP;
+    public int hp
     {
         set
         {
@@ -35,12 +36,12 @@ public class PlayerManager : Singleton<PlayerManager>
     }
     
     public float noHitTime;
+    
     //Events
     public UnityEvent _stateChageEvent;
     public UnityEvent _onHpChangeEvent;
     public UnityEvent _onDeadEvent;
-    // 오브젝트들
-    // TODO 탄환 스포너
+    public UnityEvent _onHitEvent;
     
     // Scriptable Object
     public PlayerStateContainer _PlayerStateContainer;
@@ -62,6 +63,7 @@ public class PlayerManager : Singleton<PlayerManager>
     
     // Player 발사 반복 횟수
     public int iterTime;
+    
     public PlayerState _currentState
     {
         set
@@ -87,7 +89,24 @@ public class PlayerManager : Singleton<PlayerManager>
         {
             Debug.Log("State Changed. Before State: " + _currentState._stateName);
         });
-
+        _onHitEvent.AddListener(() =>
+        {
+            // 상태 변경
+            StartCoroutine(ChangeStateAfterSec(_currentState));
+            _currentState = _PlayerStateContainer.PlayerStates["HitState"];
+        });
+        
+        _onHitEvent.AddListener(() =>
+        {
+            // 애니메이션 처리
+            StartCoroutine(HitAnimation(this.GetComponent<SpriteRenderer>()));
+        });
+        _onDeadEvent.AddListener(() =>
+        {
+            this.GetComponent<Animator>().SetTrigger("Die");
+            this.GetComponent<SpriteRenderer>().color = Color.white;
+        });
+        
         // set default value
         stateChangeDelay = 0f;
         shotDelay = 0f;
@@ -106,7 +125,7 @@ public class PlayerManager : Singleton<PlayerManager>
         }
 
         // 탄환 발사
-        if (Input.GetKeyDown(KeyCode.Space) && shotDelay <= 0)
+        if (_currentState._stateName.Equals("AttackState") && Input.GetKeyDown(KeyCode.Space) && shotDelay <= 0)
         {
             
             if (numOfBullets > 0)
@@ -134,11 +153,12 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         if (other.tag.Equals("EnemyBullet"))
         {
+            BulletHandler handler = other.GetComponent<BulletHandler>();
             if (_currentState._isGetDamage)
             {
                 // 데이미지를 받는 경우
-                StartCoroutine(ChangeStateAfterSec(_currentState));
-                _currentState = _PlayerStateContainer.PlayerStates["HitState"];
+                _onHitEvent.Invoke();
+                hp -= handler.damage;
             }
             else
             {
@@ -150,9 +170,17 @@ public class PlayerManager : Singleton<PlayerManager>
                 }
                 else if (_currentState._stateName.Equals("DefenceState"))
                 {
-                    // 방어 상태인 경우
-                    ++numOfBullets;
-                    Debug.Log(numOfBullets);
+                    if (handler.isPoison)
+                    {
+                        _onHitEvent.Invoke();
+                        hp -= handler.damage;
+                    }
+                    else
+                    {
+                        // 방어 상태인 경우
+                        ++numOfBullets;
+                        Debug.Log(numOfBullets);
+                    }
                 }
             }
             Destroy(other.gameObject);
@@ -199,5 +227,19 @@ public class PlayerManager : Singleton<PlayerManager>
         _currentState = state;
     }
 
+    IEnumerator HitAnimation(SpriteRenderer renderer)
+    {
+        Color baseColor = renderer.color;
+        renderer.color = Color.red;
+
+        yield return new WaitForSeconds(noHitTime);
+
+        renderer.color = baseColor;
+    }
+
+    public void AfterDeadAnimation()
+    {
+        Time.timeScale = 0;
+    }
     #endregion
 }
