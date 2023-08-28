@@ -8,10 +8,37 @@ public class PlayerManager : Singleton<PlayerManager>
 {
     // 내부 변수
     private int numOfBullets;
-    public uint hp;
-    public float noHitTime;
-    public UnityEvent _stateChageEvent;
+    private uint HP;
+    public uint maxHP;
+    public uint hp
+    {
+        set
+        {
+            if (HP != value)
+            {
+                if (value <= maxHP)
+                {
+                    _onHpChangeEvent.Invoke();
+                    HP = value;
+                }
 
+                if (value == 0)
+                {
+                    _onDeadEvent.Invoke();
+                }
+            }
+        }
+        get
+        {
+            return HP;
+        }
+    }
+    
+    public float noHitTime;
+    //Events
+    public UnityEvent _stateChageEvent;
+    public UnityEvent _onHpChangeEvent;
+    public UnityEvent _onDeadEvent;
     // 오브젝트들
     // TODO 탄환 스포너
     
