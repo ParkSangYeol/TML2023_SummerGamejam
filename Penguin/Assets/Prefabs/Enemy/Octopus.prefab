@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  attackTimerMax: 2
+  attackTimerMax: 4
   attackTimer: 0
   bulletSpawner: {fileID: 0}
   iterTime: 1

@@ -11,6 +11,6 @@ public class BulletHandler : MonoBehaviour
 
     private void Update()
     {
-        this.transform.position += new Vector3(0, Mathf.Lerp(0, speed, Time.deltaTime), 0);
+        this.transform.position += this.transform.up * Mathf.Lerp(0, speed, Time.deltaTime);
     }
 }
