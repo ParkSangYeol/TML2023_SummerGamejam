@@ -104,7 +104,7 @@ public class PlayerManager : Singleton<PlayerManager>
             if (numOfBullets > 0)
             {
                 --numOfBullets;
-                Shot();
+                Shoot();
             }
         }
         
@@ -154,7 +154,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
     #region Custom Method
     
-    private void Shot()
+    private void Shoot()
     {
         // TODO 탄환 스포너에서 물체 발사
         Debug.Log("플레이어 총알 발사!");
