@@ -53,7 +53,7 @@ public class PlayerManager : Singleton<PlayerManager>
     
     //Shot Delay Timer
     public float shotDelayMax;
-    private float shotDelay;
+    private float shootDelay;
     
     // Player Bullet Sapwner
     public BulletSpawner _BulletSpawner;
@@ -109,7 +109,7 @@ public class PlayerManager : Singleton<PlayerManager>
         
         // set default value
         stateChangeDelay = 0f;
-        shotDelay = 0f;
+        shootDelay = 0f;
         numOfBullets = 0;
         hp = maxHP;
         
@@ -125,7 +125,7 @@ public class PlayerManager : Singleton<PlayerManager>
         }
 
         // 탄환 발사
-        if (_currentState._stateName.Equals("AttackState") && Input.GetKeyDown(KeyCode.Space) && shotDelay <= 0)
+        if (_currentState._stateName.Equals("AttackState") && Input.GetKeyDown(KeyCode.Space) && shootDelay <= 0)
         {
             
             if (numOfBullets > 0)
@@ -143,9 +143,9 @@ public class PlayerManager : Singleton<PlayerManager>
             stateChangeDelay -= Time.deltaTime;
         }
         // 플레이어의 공격 딜레이
-        if (shotDelay > 0)
+        if (shootDelay > 0)
         {
-            shotDelay -= Time.deltaTime;
+            shootDelay -= Time.deltaTime;
         }
     }
 
@@ -193,9 +193,9 @@ public class PlayerManager : Singleton<PlayerManager>
     
     private void Shoot()
     {
-        _BulletSpawner.BulletSpawn(this.transform.position, Quaternions, iterTime);
+        _BulletSpawner.BulletSpawn(this.transform.position, Quaternions, iterTime, shootDelay);
         Debug.Log("플레이어 총알 발사!");
-        shotDelay = shotDelayMax;
+        shootDelay = shotDelayMax;
     }
     
     public void ChangeState()

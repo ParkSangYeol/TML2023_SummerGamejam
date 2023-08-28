@@ -12,6 +12,9 @@ public class EnemyHandler : MonoBehaviour
     public float attackTimer;
 
     public BulletSpawner bulletSpawner;
+    // 발사 딜레이
+    public float shootDelay;
+    
     // 한번 발사시 반복 횟수
     public int iterTime;
     
@@ -61,7 +64,7 @@ public class EnemyHandler : MonoBehaviour
     
     public void Shoot()
     {
-        bulletSpawner.BulletSpawn(this.transform.position, quaternions, iterTime);
+        bulletSpawner.BulletSpawn(this.transform.position, quaternions, iterTime, shootDelay);
     }
 
     private void OnDestroy()

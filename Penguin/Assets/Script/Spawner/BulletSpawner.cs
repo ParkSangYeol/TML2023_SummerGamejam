@@ -5,7 +5,6 @@ using UnityEngine;
 public class BulletSpawner : MonoBehaviour
 {
     public BulletContainer container;
-    public float shootDelay;
 
     // Start is called before the first frame update
     void Start()
@@ -18,13 +17,12 @@ public class BulletSpawner : MonoBehaviour
     {
 
     }
-
-    public void BulletSpawn(Vector3 spawnPos, List<Quaternion> rotations, int iterTime)
+    public void BulletSpawn(Vector3 spawnPos, List<Quaternion> rotations, int iterTime, float shootDelay)
     {
-        StartCoroutine(StartBulletSpawn(spawnPos, rotations, iterTime));
+        StartCoroutine(StartBulletSpawn(spawnPos, rotations, iterTime, shootDelay));
     }
 
-    IEnumerator StartBulletSpawn(Vector3 spawnPos, List<Quaternion> rotations, int iterTime)
+    IEnumerator StartBulletSpawn(Vector3 spawnPos, List<Quaternion> rotations, int iterTime, float shootDelay)
     {
         for (int i = 0; i < iterTime; ++i)
         {
