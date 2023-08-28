@@ -425,10 +425,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1a2c95927e3bd4382f74edb8cf1c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
+  maxHP: 0
   noHitTime: 2
-  stateChangeDelayMax: 3
   _stateChageEvent:
     m_PersistentCalls:
       m_Calls: []
+  _onHpChangeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _onDeadEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _PlayerStateContainer: {fileID: 11400000, guid: ecf46d9b9ef1fe246b68706ccf5a29ef, type: 2}
+  stateChangeDelayMax: 3
+  shotDelayMax: 0
