@@ -19,8 +19,8 @@ public class PlayerManager : Singleton<PlayerManager>
             {
                 if (value <= maxHP)
                 {
-                    _onHpChangeEvent.Invoke();
                     HP = value;
+                    _onHpChangeEvent.Invoke(HP);
                 }
 
                 if (value < 0)
@@ -39,7 +39,7 @@ public class PlayerManager : Singleton<PlayerManager>
     
     //Events
     public UnityEvent _stateChageEvent;
-    public UnityEvent _onHpChangeEvent;
+    public UnityEvent<int> _onHpChangeEvent;
     public UnityEvent _onDeadEvent;
     public UnityEvent _onHitEvent;
     
