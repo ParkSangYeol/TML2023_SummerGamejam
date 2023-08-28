@@ -200,7 +200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   container: {fileID: 11400000, guid: 8124c646fd51fa149a4662d7287dae1e, type: 2}
-  shootDelay: 1
 --- !u!4 &303695653
 Transform:
   m_ObjectHideFlags: 0
@@ -644,7 +643,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   container: {fileID: 11400000, guid: bd882d49bb059c24ca483f43aaf83da3, type: 2}
-  shootDelay: 1
 --- !u!4 &1969684414
 Transform:
   m_ObjectHideFlags: 0
@@ -667,6 +665,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5173394705334789912, guid: 02324af02c2608f4a99c76c2bcdc143c, type: 3}
+      propertyPath: maxVec.x
+      value: 8.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173394705334789912, guid: 02324af02c2608f4a99c76c2bcdc143c, type: 3}
+      propertyPath: minVec.x
+      value: -8.88
+      objectReference: {fileID: 0}
     - target: {fileID: 5173394705334789913, guid: 02324af02c2608f4a99c76c2bcdc143c, type: 3}
       propertyPath: _BulletSpawner
       value: 

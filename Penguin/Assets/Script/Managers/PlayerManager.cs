@@ -8,7 +8,23 @@ using UnityEngine.Events;
 public class PlayerManager : Singleton<PlayerManager>
 {
     // 내부 변수
-    public int numOfBullets;
+    private int NUM_OF_BULLETS;
+
+    public int numOfBullets
+    {
+        set
+        {
+            if (NUM_OF_BULLETS != value)
+            {
+                NUM_OF_BULLETS = value;
+                _onBulletsChangeEvent.Invoke(NUM_OF_BULLETS);
+            }
+        }
+        get
+        {
+            return NUM_OF_BULLETS;
+        }
+    }
     private int HP;
     public int maxHP;
     public int hp
@@ -19,8 +35,8 @@ public class PlayerManager : Singleton<PlayerManager>
             {
                 if (value <= maxHP)
                 {
-                    _onHpChangeEvent.Invoke();
                     HP = value;
+                    _onHpChangeEvent.Invoke(HP);
                 }
 
                 if (value < 0)
@@ -39,9 +55,10 @@ public class PlayerManager : Singleton<PlayerManager>
     
     //Events
     public UnityEvent _stateChageEvent;
-    public UnityEvent _onHpChangeEvent;
+    public UnityEvent<int> _onHpChangeEvent;
     public UnityEvent _onDeadEvent;
     public UnityEvent _onHitEvent;
+    public UnityEvent<int> _onBulletsChangeEvent;
     
     // Scriptable Object
     public PlayerStateContainer _PlayerStateContainer;
