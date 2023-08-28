@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571d8f490056e0547bb0c03518962a6e, type: 3}
   m_Name: FishBone
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 0}
+  Bullet: {fileID: 8003041633358554558, guid: 198ccd230f12ae64ca8f78c45bebed55, type: 3}
   prob: 1

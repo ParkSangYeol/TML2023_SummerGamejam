@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571d8f490056e0547bb0c03518962a6e, type: 3}
   m_Name: PosionFish
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 0}
+  Bullet: {fileID: 8003041633358554558, guid: 00d0a88e1b56c4049856a77b888ab214, type: 3}
   prob: 15
