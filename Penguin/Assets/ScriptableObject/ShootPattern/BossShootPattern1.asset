@@ -28,3 +28,4 @@ MonoBehaviour:
   - {x: 0, y: 0, z: -0.38268346, w: 0.9238795}
   - {x: 0, y: 0, z: 0.38268346, w: 0.9238795}
   triggerName: Pattern1
+  _attackSFX: {fileID: 8300000, guid: 43dccb2ba23144e44a222a575e6b38cf, type: 3}

@@ -171,7 +171,7 @@ public class PlayerManager : Singleton<PlayerManager>
         });
         _onDeadEvent.AddListener(() =>
         {
-            SFXManager.Instance.PlayOneShot(_deadSFX);
+            SFXManager.Instance.PlayBGMOneShot(_deadSFX);
         });
         _stateChageEvent.AddListener( state =>
         {

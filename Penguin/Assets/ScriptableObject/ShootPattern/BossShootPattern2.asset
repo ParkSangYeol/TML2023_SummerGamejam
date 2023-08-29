@@ -26,3 +26,4 @@ MonoBehaviour:
   quaternions:
   - {x: 0, y: 0, z: 0, w: 0}
   triggerName: Pattern2
+  _attackSFX: {fileID: 8300000, guid: 43dccb2ba23144e44a222a575e6b38cf, type: 3}

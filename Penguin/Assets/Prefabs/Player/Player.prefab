@@ -93,6 +93,12 @@ MonoBehaviour:
   _onBulletsChangeEvent:
     m_PersistentCalls:
       m_Calls: []
+  _onChangePoint:
+    m_PersistentCalls:
+      m_Calls: []
+  _onAttack:
+    m_PersistentCalls:
+      m_Calls: []
   _PlayerStateContainer: {fileID: 11400000, guid: ecf46d9b9ef1fe246b68706ccf5a29ef, type: 2}
   stateChangeDelayMax: 3
   shotDelayMax: 1
@@ -100,6 +106,12 @@ MonoBehaviour:
   Quaternions:
   - {x: 0, y: 0, z: 0, w: 1}
   iterTime: 1
+  _attackSFX: {fileID: 8300000, guid: 59a5b812bebc6144c998041964c96cd1, type: 3}
+  _hitSFX: {fileID: 8300000, guid: 5888de6d14b08084c98778888eac5ded, type: 3}
+  _deadSFX: {fileID: 8300000, guid: d66d5e9e105c2834bb6acc9bacef5684, type: 3}
+  _stateChageSFX: {fileID: 8300000, guid: 245bb2a6486225044ab17bb25a8270ae, type: 3}
+  _healSFX: {fileID: 8300000, guid: 84147325911a9e24fa2d57c4732c58b0, type: 3}
+  _getSFX: {fileID: 8300000, guid: 888c13b289cff5d46a9d21af6f980e4c, type: 3}
 --- !u!212 &8007643066301930129
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -27,4 +27,12 @@ public class SFXManager : Singleton<SFXManager>
         _audioSource.clip = audioClip;
         _audioSource.Play();
     }
+    
+    public void PlayBGMOneShot(AudioClip audioClip)
+    {
+        _audioSource.Stop();
+        _audioSource.loop = false;
+        _audioSource.clip = audioClip;
+        _audioSource.Play();
+    }
 }

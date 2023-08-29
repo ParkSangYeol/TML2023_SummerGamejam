@@ -15,3 +15,4 @@ MonoBehaviour:
   Enemy: {fileID: 6172436717531998213, guid: 5b207500487c82348a7c64fa31cfe268, type: 3}
   prob: 100
   point: 1000
+  _spawnSFX: {fileID: 8300000, guid: 46216039d52d4ec4b87ed73a6730dbf1, type: 3}
