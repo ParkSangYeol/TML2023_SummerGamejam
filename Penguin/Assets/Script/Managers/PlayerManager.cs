@@ -76,7 +76,7 @@ public class PlayerManager : Singleton<PlayerManager>
     public float noHitTime;
     
     //Events
-    public UnityEvent _stateChageEvent;
+    public UnityEvent<PlayerState> _stateChageEvent;
     public UnityEvent<int> _onHpChangeEvent;
     public UnityEvent _onDeadEvent;
     public UnityEvent _onHitEvent;
@@ -110,8 +110,8 @@ public class PlayerManager : Singleton<PlayerManager>
         {
             if (CURRENT_STATE != value)
             {
-                _stateChageEvent.Invoke();
                 CURRENT_STATE = value;
+                _stateChageEvent.Invoke(value);
             }
         }
         get
@@ -125,9 +125,9 @@ public class PlayerManager : Singleton<PlayerManager>
     private void Start()
     {
         _currentState = _PlayerStateContainer.PlayerStates["DefenceState"];
-        _stateChageEvent.AddListener(() =>
+        _stateChageEvent.AddListener(state =>
         {
-            Debug.Log("State Changed. Before State: " + _currentState._stateName);
+            Debug.Log("State Changed. current State: " + _currentState._stateName);
         });
         _onHitEvent.AddListener(() =>
         {
