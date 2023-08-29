@@ -60,14 +60,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6ff2e72bbbe9d438fc2a867b9ca33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  attackTimerMax: 2
+  health: 6
+  attackTimerMax: 0.7
   attackTimer: 0
   bulletSpawner: {fileID: 0}
   shootDelay: 0
   iterTime: 1
   quaternions:
   - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0.38268346, w: 0.9238795}
+  - {x: 0, y: 0, z: -0.38268346, w: 0.9238795}
   OnDestroyEvent:
     m_PersistentCalls:
       m_Calls: []
