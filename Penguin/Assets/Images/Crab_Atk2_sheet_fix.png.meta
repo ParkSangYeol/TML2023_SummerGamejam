@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 42f32a2ac5242c5459ca17bf0de504ad
+guid: 111db25ca4cce3b46933f40fde720c04
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 19
+  spritePixelsToUnits: 96
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,7 +105,322 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_0
+      name: Crab_Atk2_sheet_fix_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370a413bbe18e394c9307417a483f848
+      internalID: -852253286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5298bd6145dd34ea789b48ef3caa7c
+      internalID: 571918128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec269f8ed87df464ea742efbe78aa750
+      internalID: -28990301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c57c77766e4dad40bef90e02d72d94d
+      internalID: -760440501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b449b3b6acd43b94faca8717ca14ad01
+      internalID: 1573841338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6b5d5fc43f78449b824d0a5a76bff9
+      internalID: 1492909623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2cdb33bdf1ec241a77d74a888481e0
+      internalID: -2072414144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f46dc6072e61084e8e8693e4a856de9
+      internalID: -2074046607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b54875c562ca134088c481bc9df5a7d
+      internalID: -1171569855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_9
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818f12d1d5bf8d44eb0c541448cc7b35
+      internalID: -1820467561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82885cd81eb00e44b88356bf96425950
+      internalID: -1219232209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293c6ab103759314e98a63520f208fc9
+      internalID: 70776172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_12
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033248ceb0725e44ebba6c73f38c3170
+      internalID: -1862916942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_13
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8288f0748202b74b8c4b449065188fc
+      internalID: -1868188204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_14
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3e8d5a0af9ca842b39f0d5c5076a98
+      internalID: -1817368219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crab_Atk2_sheet_fix_15
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63302507eab8d194f9a85ea63ac218f9
-      internalID: 2099274016
+      spriteID: 811b8ca1147cf6f4d942856aeee50df2
+      internalID: -676843466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_1
+      name: Crab_Atk2_sheet_fix_16
       rect:
         serializedVersion: 2
         x: 96
@@ -140,14 +455,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c41ec614085cc8e4190a95b46a97f91a
-      internalID: 595036735
+      spriteID: 53a545326a5ac3b47ab570830dbfc9c1
+      internalID: 393293516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_2
+      name: Crab_Atk2_sheet_fix_17
       rect:
         serializedVersion: 2
         x: 192
@@ -161,14 +476,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a12e3d010eb85bd48a23dce56c42c47b
-      internalID: 1173782268
+      spriteID: a789f85574181014290bf9dd5b292263
+      internalID: -295704654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_3
+      name: Crab_Atk2_sheet_fix_18
       rect:
         serializedVersion: 2
         x: 288
@@ -182,14 +497,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 608c829bd639f15478d8ce1d3fc152bd
-      internalID: 978886195
+      spriteID: cbb47962337a32c478a53bbd352ef10c
+      internalID: 2057026679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_4
+      name: Crab_Atk2_sheet_fix_19
       rect:
         serializedVersion: 2
         x: 384
@@ -203,14 +518,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81de568fdcd70a24db706a0e8303f802
-      internalID: 881858276
+      spriteID: d9bfbb768e6da2f4db8157b44f78887d
+      internalID: -1475307756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_5
+      name: Crab_Atk2_sheet_fix_20
       rect:
         serializedVersion: 2
         x: 480
@@ -224,14 +539,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bb040370b095f14397d36279877c918
-      internalID: -22276458
+      spriteID: 8eff2376c096c2649953227ed1a714dc
+      internalID: 534444564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_6
+      name: Crab_Atk2_sheet_fix_21
       rect:
         serializedVersion: 2
         x: 576
@@ -245,14 +560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ef6aeb8baf2beb49b02a004063fa05a
-      internalID: -2064585096
+      spriteID: efb258864da908c45a82900da33e7dab
+      internalID: 1628915929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_7
+      name: Crab_Atk2_sheet_fix_22
       rect:
         serializedVersion: 2
         x: 672
@@ -266,14 +581,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f7d2ab8e5b84c949983e54752117ac6
-      internalID: -1175657370
+      spriteID: 0a3730f2f8f1c634cae8a69e9ed18361
+      internalID: -163118102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_8
+      name: Crab_Atk2_sheet_fix_23
       rect:
         serializedVersion: 2
         x: 768
@@ -287,14 +602,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4af596590359bbf4b928746b4a44fc4f
-      internalID: -29277593
+      spriteID: 9e9e039b31c57fc41b2e567af7b770bf
+      internalID: -244846900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_9
+      name: Crab_Atk2_sheet_fix_24
       rect:
         serializedVersion: 2
         x: 864
@@ -308,14 +623,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e36df69ee43703438b4bfb361ed01e2
-      internalID: -729030195
+      spriteID: 46101367391257b40bb13d1e39bb81a0
+      internalID: -2035835140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_10
+      name: Crab_Atk2_sheet_fix_25
       rect:
         serializedVersion: 2
         x: 960
@@ -329,14 +644,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b015a062a51dbec4c81d9dd7b1820d72
-      internalID: 553886498
+      spriteID: 4e4bda3aba195a049b4854fb81956e1b
+      internalID: 610051482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_11
+      name: Crab_Atk2_sheet_fix_26
       rect:
         serializedVersion: 2
         x: 1056
@@ -350,14 +665,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 131727239732a4b4a9b03904d6bd136f
-      internalID: -1589990341
+      spriteID: a7133373f486c2d4e832c0e7c9e88fe3
+      internalID: -687234953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_12
+      name: Crab_Atk2_sheet_fix_27
       rect:
         serializedVersion: 2
         x: 1152
@@ -371,14 +686,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3acd6f5a10fd0284597e3067d91b6924
-      internalID: 890946754
+      spriteID: 0c883d576c1bd8a45a10e22dbfe20952
+      internalID: -57189740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_13
+      name: Crab_Atk2_sheet_fix_28
       rect:
         serializedVersion: 2
         x: 1248
@@ -392,14 +707,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f23fa4de8031eb4eb5620536a14a6f2
-      internalID: -1965693340
+      spriteID: 8b644658b637b3f409f645bcd6ece717
+      internalID: 1865488182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crab_Atk2_sheet_14
+      name: Crab_Atk2_sheet_fix_29
       rect:
         serializedVersion: 2
         x: 1344
@@ -413,323 +728,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07d767ddfb40c964f823e631f4f74029
-      internalID: 1655643155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_15
-      rect:
-        serializedVersion: 2
-        x: 1440
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40b90ad9af2b0324a9eab36417916021
-      internalID: -866207603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_16
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d87c5d2c8150bb144bced64d3c45af41
-      internalID: 680581494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_17
-      rect:
-        serializedVersion: 2
-        x: 1632
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36e77d23c1187b148bb87892094ccf4c
-      internalID: -344794197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_18
-      rect:
-        serializedVersion: 2
-        x: 1728
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ade6e7fd19029d3439bb57c95a682f68
-      internalID: 2028812673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_19
-      rect:
-        serializedVersion: 2
-        x: 1824
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56ec5a53ef7ddce4d9dca56cfcbd3f21
-      internalID: -1664737351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_20
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d4b3196d171cc742aa6b1a10c56f468
-      internalID: 368968935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_21
-      rect:
-        serializedVersion: 2
-        x: 2016
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ab47bbea0ca4c94ca5aa226678237b9
-      internalID: 29179153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_22
-      rect:
-        serializedVersion: 2
-        x: 2112
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ebf5ecd1618c2c4da90a91c759eb85d
-      internalID: -1246106609
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_23
-      rect:
-        serializedVersion: 2
-        x: 2208
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdcde992a26056447bcbf3059d036f87
-      internalID: -743224580
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_24
-      rect:
-        serializedVersion: 2
-        x: 2304
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ee4e94826a3c5c42bce6eb1a6a505ae
-      internalID: -1575993769
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_25
-      rect:
-        serializedVersion: 2
-        x: 2400
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13c22ed64ed741c4fa261e8e27e465aa
-      internalID: -347908080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_26
-      rect:
-        serializedVersion: 2
-        x: 2496
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 823fc7b2ba1316f498307dd0e14333da
-      internalID: -1219126296
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_27
-      rect:
-        serializedVersion: 2
-        x: 2592
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b64c54fcd731f6942acbea630d8bf53e
-      internalID: 1867257592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_28
-      rect:
-        serializedVersion: 2
-        x: 2688
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0fc36a327e5c21429110ea02212fa88
-      internalID: -1571325172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crab_Atk2_sheet_29
-      rect:
-        serializedVersion: 2
-        x: 2784
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4e61f06d730e8744876cedcf853fcfb
-      internalID: -1484373191
+      spriteID: 59ab3de7611d0ae48bb066445ebaa291
+      internalID: -332130974
       vertices: []
       indices: 
       edges: []
@@ -737,7 +737,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ab6f0df2f38590f46a165219ab949f0a
+    spriteID: c337f67721c7c0044a479d3888b2f7d0
     internalID: 0
     vertices: []
     indices: 
@@ -745,36 +745,36 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Crab_Atk2_sheet_0: 2099274016
-      Crab_Atk2_sheet_1: 595036735
-      Crab_Atk2_sheet_10: 553886498
-      Crab_Atk2_sheet_11: -1589990341
-      Crab_Atk2_sheet_12: 890946754
-      Crab_Atk2_sheet_13: -1965693340
-      Crab_Atk2_sheet_14: 1655643155
-      Crab_Atk2_sheet_15: -866207603
-      Crab_Atk2_sheet_16: 680581494
-      Crab_Atk2_sheet_17: -344794197
-      Crab_Atk2_sheet_18: 2028812673
-      Crab_Atk2_sheet_19: -1664737351
-      Crab_Atk2_sheet_2: 1173782268
-      Crab_Atk2_sheet_20: 368968935
-      Crab_Atk2_sheet_21: 29179153
-      Crab_Atk2_sheet_22: -1246106609
-      Crab_Atk2_sheet_23: -743224580
-      Crab_Atk2_sheet_24: -1575993769
-      Crab_Atk2_sheet_25: -347908080
-      Crab_Atk2_sheet_26: -1219126296
-      Crab_Atk2_sheet_27: 1867257592
-      Crab_Atk2_sheet_28: -1571325172
-      Crab_Atk2_sheet_29: -1484373191
-      Crab_Atk2_sheet_3: 978886195
-      Crab_Atk2_sheet_4: 881858276
-      Crab_Atk2_sheet_5: -22276458
-      Crab_Atk2_sheet_6: -2064585096
-      Crab_Atk2_sheet_7: -1175657370
-      Crab_Atk2_sheet_8: -29277593
-      Crab_Atk2_sheet_9: -729030195
+      Crab_Atk2_sheet_fix_0: -852253286
+      Crab_Atk2_sheet_fix_1: 571918128
+      Crab_Atk2_sheet_fix_10: -1219232209
+      Crab_Atk2_sheet_fix_11: 70776172
+      Crab_Atk2_sheet_fix_12: -1862916942
+      Crab_Atk2_sheet_fix_13: -1868188204
+      Crab_Atk2_sheet_fix_14: -1817368219
+      Crab_Atk2_sheet_fix_15: -676843466
+      Crab_Atk2_sheet_fix_16: 393293516
+      Crab_Atk2_sheet_fix_17: -295704654
+      Crab_Atk2_sheet_fix_18: 2057026679
+      Crab_Atk2_sheet_fix_19: -1475307756
+      Crab_Atk2_sheet_fix_2: -28990301
+      Crab_Atk2_sheet_fix_20: 534444564
+      Crab_Atk2_sheet_fix_21: 1628915929
+      Crab_Atk2_sheet_fix_22: -163118102
+      Crab_Atk2_sheet_fix_23: -244846900
+      Crab_Atk2_sheet_fix_24: -2035835140
+      Crab_Atk2_sheet_fix_25: 610051482
+      Crab_Atk2_sheet_fix_26: -687234953
+      Crab_Atk2_sheet_fix_27: -57189740
+      Crab_Atk2_sheet_fix_28: 1865488182
+      Crab_Atk2_sheet_fix_29: -332130974
+      Crab_Atk2_sheet_fix_3: -760440501
+      Crab_Atk2_sheet_fix_4: 1573841338
+      Crab_Atk2_sheet_fix_5: 1492909623
+      Crab_Atk2_sheet_fix_6: -2072414144
+      Crab_Atk2_sheet_fix_7: -2074046607
+      Crab_Atk2_sheet_fix_8: -1171569855
+      Crab_Atk2_sheet_fix_9: -1820467561
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
