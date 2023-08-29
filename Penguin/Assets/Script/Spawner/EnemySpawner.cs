@@ -48,6 +48,15 @@ public class EnemySpawner : MonoBehaviour
         }
         
         BossSpawn();
+        
+        while (true)
+        {
+            if (count < 3)
+            {
+                EnemySpawn();
+            }
+            yield return new WaitForSeconds(3.0f);
+        }
     }
 
     public void EnemySpawn()

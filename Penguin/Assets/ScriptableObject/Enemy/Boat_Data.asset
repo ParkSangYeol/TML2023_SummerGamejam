@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ef6621107450ce4db5b4e51c05d0bb1, type: 3}
-  m_Name: Shark_Data
+  m_Name: Boat_Data
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 6172436717531998213, guid: a8b700b2dae9b964f95b209c08510794, type: 3}
+  Enemy: {fileID: 6172436717531998213, guid: bcde639ddab612f418d0b5acb681f51b, type: 3}
   prob: 10
-  point: 16
+  point: 13
   _spawnSFX: {fileID: 0}

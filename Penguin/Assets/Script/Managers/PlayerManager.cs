@@ -62,7 +62,7 @@ public class PlayerManager : MonoBehaviour
                 _onChangePoint.Invoke(POINT);
             }
 
-            if (value > 8)
+            if (value > 100)
             {
                 GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().stopTrigger = true;
             }

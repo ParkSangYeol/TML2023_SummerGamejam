@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: PenguinKnight_Data
   m_EditorClassIdentifier: 
   Enemy: {fileID: 6172436717531998213, guid: 9664d7a567a0b20498331e28d3039854, type: 3}
-  prob: 50
+  prob: 70
   point: 10
+  _spawnSFX: {fileID: 0}

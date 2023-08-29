@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8909204426305615842}
   - component: {fileID: 7170801840978974776}
   m_Layer: 0
-  m_Name: Shark
+  m_Name: Boat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,8 +60,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6ff2e72bbbe9d438fc2a867b9ca33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  attackTimerMax: 1
+  health: 3
+  attackTimerMax: 1.7
   attackTimer: 0
   bulletSpawner: {fileID: 0}
   shootDelay: 0
@@ -70,10 +70,12 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0, w: 0}
   - {x: 0, y: 0, z: 0.38268346, w: 0.9238795}
   - {x: 0, y: 0, z: -0.38268346, w: 0.9238795}
+  - {x: 0, y: 0, z: 0.1305262, w: 0.9914449}
+  - {x: 0, y: 0, z: -0.1305262, w: 0.9914449}
   OnDestroyEvent:
     m_PersistentCalls:
       m_Calls: []
-  Patterns: 0100000002000000
+  Patterns: 04000000
 --- !u!212 &8909204426305615842
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -115,7 +117,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -781027200, guid: b30d875c535662c42af024fe4b5c584b, type: 3}
+  m_Sprite: {fileID: 1503964101, guid: 9e097524b56dff0428293d610c56a022, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -136,7 +138,7 @@ Animator:
   m_GameObject: {fileID: 6172436717531998213}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c2fe052e209034a49bb14ef1e2c8b6ef, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4a6617bcdd4283249949ea58fa4897ef, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
