@@ -61,6 +61,11 @@ public class PlayerManager : Singleton<PlayerManager>
                 POINT = value;
                 _onChangePoint.Invoke(POINT);
             }
+
+            if (value > 8)
+            {
+                GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().stopTrigger = true;
+            }
         }
         get
         {

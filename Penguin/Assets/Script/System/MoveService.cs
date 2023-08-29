@@ -8,6 +8,7 @@ public class MoveService : Singleton<MoveService>
     public float minHor, maxHor;
     public float minVer, maxVer;
     public float minDuration, maxDuration;
+    public List<Vector3> movePoint;
 
     private void Start()
     {
@@ -39,6 +40,11 @@ public class MoveService : Singleton<MoveService>
         return pos;
     }
 
+    private Vector3 GetMovePoint(Vector3 pos)
+    {
+        return movePoint[UnityEngine.Random.Range(0, movePoint.Count)];
+    }
+    
     public PatternCommand GetMoveHorizontalPattern(Vector3 position)
     {
         PatternCommand command = new PatternCommand();
@@ -62,6 +68,24 @@ public class MoveService : Singleton<MoveService>
         PatternCommand command = new PatternCommand();
         command.pos = GetStop(position);
         command.duration = UnityEngine.Random.Range(minDuration, maxDuration);
+
+        return command;
+    }
+
+    public PatternCommand GetMovePointPattern(Vector3 position)
+    {
+        PatternCommand command = new PatternCommand();
+        command.pos = GetMovePoint(position);
+        command.duration = 0.5f;
+
+        return command;
+    }
+
+    public PatternCommand GetStopExactlyPattern(Vector3 position, float time)
+    {
+        PatternCommand command = new PatternCommand();
+        command.pos = GetStop(position);
+        command.duration = time;
 
         return command;
     }

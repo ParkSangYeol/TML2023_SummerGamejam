@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {    
     public EnemyContainer _EnemyContainer;
+    public EnemyContainer _bossContainer;
     public BulletSpawner _BulletSpawner;
+    public BulletSpawner _bossBulletSpawner;
     public int maxCount;
     int count = 0;
     
@@ -24,11 +27,11 @@ public class EnemySpawner : MonoBehaviour
         
     }
 
-    private bool stopTrigger = true;
+    public bool stopTrigger = false;
     
     IEnumerator CreateEnemyRoutine()
     {
-        while (stopTrigger)
+        while (!stopTrigger)
         {
             if (count < maxCount)
             {
@@ -36,6 +39,8 @@ public class EnemySpawner : MonoBehaviour
             }
             yield return new WaitForSeconds(3.0f);
         }
+        
+        BossSpawn();
     }
 
     public void EnemySpawn()
@@ -66,5 +71,26 @@ public class EnemySpawner : MonoBehaviour
             }
         });
         count++;
+    }
+
+    public void BossSpawn()
+    {
+        Vector3 pos = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.0f, 1.0f), 0.95f, 0));
+        pos.z = 0.0f;
+
+        EnemyData bossData = _bossContainer.GetRandomEnemy();
+        var spawnObj = Instantiate(bossData.Enemy, pos, Quaternion.identity);
+        BossHandler handler = spawnObj.GetComponent<BossHandler>();
+        handler.bulletSpawner = _bossBulletSpawner;
+        handler.OnDestroyEvent.AddListener(() =>
+        {
+            // 플레이어의 점수를 갱신
+            PlayerManager.Instance.point += bossData.point;
+        });
+        handler.OnDestroyEvent.AddListener(() =>
+        {
+            // 보스 처치
+            // TODO
+        });
     }
 }

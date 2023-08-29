@@ -13,5 +13,7 @@ public enum MovePattern
 {
     MoveHorizontal,
     MovePosition,
-    Stop
+    Stop,
+    MovePoint,
+    StopExactly
 }
