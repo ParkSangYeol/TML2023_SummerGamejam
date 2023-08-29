@@ -9,7 +9,6 @@ public class PlayerManager : Singleton<PlayerManager>
 {
     // 내부 변수
     private int NUM_OF_BULLETS;
-
     public int numOfBullets
     {
         set
@@ -50,6 +49,24 @@ public class PlayerManager : Singleton<PlayerManager>
             return HP;
         }
     }
+
+    private int POINT;
+
+    public int point
+    {
+        set
+        {
+            if (POINT != value)
+            {
+                POINT = value;
+                _onChangePoint.Invoke(POINT);
+            }
+        }
+        get
+        {
+            return POINT;
+        }
+    }
     
     public float noHitTime;
     
@@ -59,7 +76,8 @@ public class PlayerManager : Singleton<PlayerManager>
     public UnityEvent _onDeadEvent;
     public UnityEvent _onHitEvent;
     public UnityEvent<int> _onBulletsChangeEvent;
-    
+    public UnityEvent<int> _onChangePoint;
+
     // Scriptable Object
     public PlayerStateContainer _PlayerStateContainer;
     private PlayerState CURRENT_STATE;
