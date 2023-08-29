@@ -61,7 +61,7 @@ public class EnemySpawner : MonoBehaviour
 
     public void EnemySpawn()
     {
-        Vector3 pos = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.0f, 1.0f), 0.95f, 0));
+        Vector3 pos = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.0f, 1.0f), 0.85f, 0));
         pos.z = 0.0f;
 
         EnemyData enemyData = _EnemyContainer.GetRandomEnemy();

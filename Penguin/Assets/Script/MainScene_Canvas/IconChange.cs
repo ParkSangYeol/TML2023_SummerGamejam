@@ -6,6 +6,7 @@ public class IconChange : MonoBehaviour
 {
     public GameObject AtkIcon;
     public GameObject DefIcon;
+    public GameObject HitIcon;
 
     public PlayerManager playerManager;
 
@@ -29,18 +30,21 @@ public class IconChange : MonoBehaviour
             {
                 DefIcon.SetActive(true);
                 AtkIcon.SetActive(false);
+                HitIcon.SetActive(false);
                 break;
             }
             case "AttackState":
             {
                 DefIcon.SetActive(false);
                 AtkIcon.SetActive(true);
+                HitIcon.SetActive(false);
                 break;
             }
             case "HitState":
             {
-                DefIcon.SetActive(true);
+                DefIcon.SetActive(false);
                 AtkIcon.SetActive(false);
+                HitIcon.SetActive(true);
                 break;
             }
         }
