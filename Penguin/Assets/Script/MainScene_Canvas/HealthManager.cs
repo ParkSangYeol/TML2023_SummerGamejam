@@ -15,7 +15,6 @@ public class HealthManager : MonoBehaviour
     void Start()
     {
         PlayerManager.Instance._onHpChangeEvent.AddListener(fillHeart);
-
     }
 
     // Update is called once per frame
