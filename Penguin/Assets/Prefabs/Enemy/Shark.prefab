@@ -60,8 +60,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6ff2e72bbbe9d438fc2a867b9ca33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 6
-  attackTimerMax: 0.7
+  health: 3
+  attackTimerMax: 1
   attackTimer: 0
   bulletSpawner: {fileID: 0}
   shootDelay: 0

@@ -48,8 +48,8 @@ MonoBehaviour:
   maxHor: 8
   minVer: 3.5
   maxVer: 5.5
-  minDuration: 1
-  maxDuration: 3
+  minDuration: 3
+  maxDuration: 5
   movePoint:
   - {x: 0, y: 4, z: 0}
   - {x: -5, y: 4, z: 0}
