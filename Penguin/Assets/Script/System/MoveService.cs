@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class MoveService : Singleton<MoveService>
 {
-    public static float minHor, maxHor;
-    public static float minVer, maxVer;
-    public static float minDuration, maxDuration;
+    public float minHor, maxHor;
+    public float minVer, maxVer;
+    public float minDuration, maxDuration;
 
     private void Start()
     {
@@ -24,22 +24,22 @@ public class MoveService : Singleton<MoveService>
         maxDuration = 3f;
     }
 
-    private static Vector3 GetMoveHorizontal(Vector3 position)
+    private Vector3 GetMoveHorizontal(Vector3 position)
     {
         return new Vector3(UnityEngine.Random.Range(minHor, maxHor),position.y,position.z);;
     }
 
-    private static Vector3 GetMove()
+    private Vector3 GetMove()
     {
         return new Vector3(UnityEngine.Random.Range(minHor, maxHor), UnityEngine.Random.Range(minVer, maxVer), 0);
     }
 
-    private static Vector3 GetStop(Vector3 pos)
+    private Vector3 GetStop(Vector3 pos)
     {
         return pos;
     }
 
-    public static PatternCommand GetMoveHorizontalPattern(Vector3 position)
+    public PatternCommand GetMoveHorizontalPattern(Vector3 position)
     {
         PatternCommand command = new PatternCommand();
         command.pos = GetMoveHorizontal(position);
@@ -48,7 +48,7 @@ public class MoveService : Singleton<MoveService>
         return command;
     }
     
-    public static PatternCommand GetMovePattern(Vector3 position)
+    public PatternCommand GetMovePattern(Vector3 position)
     {
         PatternCommand command = new PatternCommand();
         command.pos = GetMove();
@@ -57,7 +57,7 @@ public class MoveService : Singleton<MoveService>
         return command;
     }
     
-    public static PatternCommand GetStopPattern(Vector3 position)
+    public PatternCommand GetStopPattern(Vector3 position)
     {
         PatternCommand command = new PatternCommand();
         command.pos = GetStop(position);

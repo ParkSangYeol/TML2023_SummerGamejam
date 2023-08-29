@@ -64,12 +64,14 @@ MonoBehaviour:
   attackTimerMax: 4
   attackTimer: 0
   bulletSpawner: {fileID: 0}
+  shootDelay: 0
   iterTime: 1
   quaternions:
   - {x: 0, y: 0, z: 0, w: 0}
   OnDestroyEvent:
     m_PersistentCalls:
       m_Calls: []
+  Patterns: 0100000002000000
 --- !u!212 &-7605282938637832929
 SpriteRenderer:
   m_ObjectHideFlags: 0

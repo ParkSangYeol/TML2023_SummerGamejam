@@ -78,6 +78,11 @@ public class EnemyHandler : MonoBehaviour
 
     IEnumerator MovePatternRoutine()
     {
+        if (Patterns == null)
+        {
+            Debug.LogError("There is no patterns.");
+            yield break;
+        }
         while (this.gameObject != null)
         {
             foreach (var pattern in Patterns)
@@ -87,17 +92,17 @@ public class EnemyHandler : MonoBehaviour
                 {
                     case MovePattern.MoveHorizontal:
                     {
-                        command = MoveService.GetMoveHorizontalPattern(this.transform.position);
+                        command = MoveService.Instance.GetMoveHorizontalPattern(this.transform.position);
                         break;
                     }
                     case MovePattern.MovePosition:
                     {
-                        command = MoveService.GetMovePattern(this.transform.position);
+                        command = MoveService.Instance.GetMovePattern(this.transform.position);
                         break;
                     }
                     case MovePattern.Stop:
                     {
-                        command = MoveService.GetStopPattern(this.transform.position);
+                        command = MoveService.Instance.GetStopPattern(this.transform.position);
                         break;
                     }
                 }
