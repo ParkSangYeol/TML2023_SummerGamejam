@@ -141,7 +141,8 @@ public class PlayerManager : Singleton<PlayerManager>
             this.GetComponent<Animator>().SetTrigger("Die");
             this.GetComponent<SpriteRenderer>().color = Color.white;
         });
-        
+       
+
         // set default value
         stateChangeDelay = 0f;
         shootDelay = 0f;
@@ -190,7 +191,7 @@ public class PlayerManager : Singleton<PlayerManager>
         {
             BulletHandler handler = other.GetComponent<BulletHandler>();
 
-            if (handler.damage > 0)
+            if (handler.damage < 0)
             {
                 hp -= handler.damage;
             }

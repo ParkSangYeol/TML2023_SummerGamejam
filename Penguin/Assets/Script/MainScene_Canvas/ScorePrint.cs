@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class ScorePrint : MonoBehaviour
 {
-    public int score;
     public Text scoreText;
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerManager.Instance._onChangePoint.AddListener(PointPrint);
     }
 
     // Update is called once per frame
@@ -18,16 +17,8 @@ public class ScorePrint : MonoBehaviour
     {
         
     }
-    public void PointIncreased()
+    public void PointPrint(int score)
     {
-        //오르는 조건 작성
-
-        scoreText.text = "Score : " + score;
-    }
-
-    public void PointPrint()
-    {
-        score = 0;
         scoreText.text = "Score : " + score;
     }
 }
