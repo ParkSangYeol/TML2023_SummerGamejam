@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ScorePrint : MonoBehaviour
 {
     public Text scoreText;
+    public Text LastscoreText;
 
     public PlayerManager playerManager;
     // Start is called before the first frame update
@@ -22,5 +23,7 @@ public class ScorePrint : MonoBehaviour
     public void PointPrint(int score)
     {
         scoreText.text = "Score : " + score;
+        LastscoreText.text = "Score : " + score;
+
     }
 }

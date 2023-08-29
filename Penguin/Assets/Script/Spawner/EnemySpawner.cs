@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemySpawner : MonoBehaviour
 {    
@@ -11,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
     public BulletSpawner _bossBulletSpawner;
     public int maxCount;
     int count = 0;
+    public UnityEvent _onGameClear;
 
     [SerializeField] private AudioClip _monsterDeadSFX;
     [SerializeField] private AudioClip _monsterSpawnSFX;
@@ -105,6 +107,8 @@ public class EnemySpawner : MonoBehaviour
         handler.OnDestroyEvent.AddListener(() =>
         {
             // 보스 처치
+            _onGameClear.Invoke();
+            Time.timeScale = 0f;
             SFXManager.Instance.PlayLoop(_gameClearBGM);
         });
     }

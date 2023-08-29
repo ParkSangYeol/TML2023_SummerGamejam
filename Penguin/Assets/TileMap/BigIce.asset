@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BigIce
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300000, guid: 8d2d9214cccdd9b459e5ad83d585e23a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7607843, g: 0.8392157, b: 1, a: 1}
   m_Transform:
     e00: 1
     e01: 0
