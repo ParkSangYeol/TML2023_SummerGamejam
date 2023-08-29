@@ -62,8 +62,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  minVec: {x: -8.88, y: 0, z: 0}
-  maxVec: {x: 8.88, y: 0, z: 0}
+  minVec: {x: -8.88, y: -2.5, z: 0}
+  maxVec: {x: 8.88, y: -2.5, z: 0}
 --- !u!114 &5173394705334789913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
       m_Calls: []
   _PlayerStateContainer: {fileID: 11400000, guid: ecf46d9b9ef1fe246b68706ccf5a29ef, type: 2}
   stateChangeDelayMax: 3
-  shotDelayMax: 1
+  shotDelayMax: 0
   _BulletSpawner: {fileID: 0}
   Quaternions:
   - {x: 0, y: 0, z: 0, w: 1}
