@@ -106,7 +106,6 @@ public class EnemyHandler : MonoBehaviour
                         break;
                     }
                 }
-                Debug.Log("[Command] position:" + command.pos);
 
                 StartCoroutine(MoveToPosition(command.pos, command.duration));
                 yield return new WaitForSeconds(command.duration);
@@ -120,7 +119,6 @@ public class EnemyHandler : MonoBehaviour
         while (timer > 0)
         {
             float interpolate = Time.deltaTime / duration;
-            Debug.Log("[Interpolate] interpolate:" + interpolate);
             this.transform.position = Vector3.Lerp(transform.position, position, interpolate);
             timer -= Time.deltaTime;
             yield return null;
