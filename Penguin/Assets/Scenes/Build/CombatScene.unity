@@ -236,7 +236,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -333,6 +333,17 @@ PrefabInstance:
       objectReference: {fileID: 1349961339}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b92451d69cb95bc4fb80aed34db62ef5, type: 3}
+--- !u!114 &491126700 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 623783461956631157, guid: 653bd660d6d7cab4fbaaff54b002d153, type: 3}
+  m_PrefabInstance: {fileID: 835073093}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa2b4aa552e07a42922bd479211922e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &637371586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -724,6 +735,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8917985102480075437, guid: ba6d719105ea193428b0830324da0b7a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8917985104135190321, guid: ba6d719105ea193428b0830324da0b7a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -811,6 +826,18 @@ PrefabInstance:
     - target: {fileID: 8917985104135190325, guid: ba6d719105ea193428b0830324da0b7a, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917985104173025675, guid: ba6d719105ea193428b0830324da0b7a, type: 3}
+      propertyPath: m_Text
+      value: ' X 10'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917985104301596480, guid: ba6d719105ea193428b0830324da0b7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 491126700}
+    - target: {fileID: 8917985104301596480, guid: ba6d719105ea193428b0830324da0b7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MenuButtonOn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba6d719105ea193428b0830324da0b7a, type: 3}

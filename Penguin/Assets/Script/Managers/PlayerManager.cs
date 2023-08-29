@@ -119,6 +119,9 @@ public class PlayerManager : Singleton<PlayerManager>
     [SerializeField] 
     private AudioClip _getSFX;
 
+    // 최대 수비모드 시간
+    public float maxDefenceTime;
+    
     public PlayerState _currentState
     {
         set
@@ -139,7 +142,6 @@ public class PlayerManager : Singleton<PlayerManager>
 
     private void Start()
     {
-        _currentState = _PlayerStateContainer.PlayerStates["DefenceState"];
         _stateChageEvent.AddListener(state =>
         {
             Debug.Log("State Changed. current State: " + _currentState._stateName);
@@ -147,7 +149,7 @@ public class PlayerManager : Singleton<PlayerManager>
         _onHitEvent.AddListener(() =>
         {
             // 상태 변경
-            StartCoroutine(ChangeStateAfterSec(_currentState));
+            StartCoroutine(ChangeStateAfterSec(_currentState, noHitTime));
             _currentState = _PlayerStateContainer.PlayerStates["HitState"];
         });
         
@@ -178,15 +180,20 @@ public class PlayerManager : Singleton<PlayerManager>
             SFXManager.Instance.PlayOneShot(_stateChageSFX);
         });
         
-        // set default value
-        stateChangeDelay = 0f;
-        shootDelay = 0f;
-        numOfBullets = 0;
-        hp = maxHP;
+        ReSet();
         
         Debug.Log("Game Ready");
     }
 
+    public void ReSet()
+    {
+        // set default value
+        numOfBullets = 10;
+        hp = maxHP;
+        _currentState = _PlayerStateContainer.PlayerStates["DefenceState"];
+        StartCoroutine(ChangeAttackDelay(maxDefenceTime));
+    }
+    
     private void Update()
     {
         // 상태 변경
@@ -289,6 +296,7 @@ public class PlayerManager : Singleton<PlayerManager>
         {
             Debug.Log("Set State Defence");
             _currentState = _PlayerStateContainer.PlayerStates["DefenceState"];
+            StartCoroutine(ChangeAttackDelay(maxDefenceTime));
         }
         else if (_currentState._stateName.Equals("DefenceState"))
         {
@@ -299,12 +307,24 @@ public class PlayerManager : Singleton<PlayerManager>
         stateChangeDelay = stateChangeDelayMax;
     }
 
-    IEnumerator ChangeStateAfterSec(PlayerState state)
+    IEnumerator ChangeStateAfterSec(PlayerState state, float timer)
     {
-        yield return new WaitForSeconds(noHitTime);
+        yield return new WaitForSeconds(timer);
         _currentState = state;
     }
 
+    IEnumerator ChangeAttackDelay(float timer)
+    {
+        yield return new WaitForSeconds(timer);
+        if (_currentState._stateName.Equals("DefenceState"))
+        {
+            _currentState = _PlayerStateContainer.PlayerStates["AttackState"];
+        }
+        else if(_currentState._stateName.Equals("HitState"))
+        {
+            StartCoroutine(ChangeAttackDelay(noHitTime));
+        }
+    }
     IEnumerator HitAnimation(SpriteRenderer renderer)
     {
         Color baseColor = renderer.color;

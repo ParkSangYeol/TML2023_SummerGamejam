@@ -18,6 +18,6 @@ public class TitleBtn : MonoBehaviour
     }
     public void LoadMainScene()
     {
-        SceneManager.LoadScene("DevKW");
+        SceneManager.LoadScene("CombatScene");
     }
 }

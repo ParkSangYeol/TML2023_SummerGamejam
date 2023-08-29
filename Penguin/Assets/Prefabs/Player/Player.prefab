@@ -112,6 +112,7 @@ MonoBehaviour:
   _stateChageSFX: {fileID: 8300000, guid: 245bb2a6486225044ab17bb25a8270ae, type: 3}
   _healSFX: {fileID: 8300000, guid: 84147325911a9e24fa2d57c4732c58b0, type: 3}
   _getSFX: {fileID: 8300000, guid: 888c13b289cff5d46a9d21af6f980e4c, type: 3}
+  maxDefenceTime: 10
 --- !u!212 &8007643066301930129
 SpriteRenderer:
   m_ObjectHideFlags: 0
