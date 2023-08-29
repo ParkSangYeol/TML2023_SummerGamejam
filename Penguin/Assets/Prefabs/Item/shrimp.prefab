@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8003041633358554556}
   - component: {fileID: 8003041633358554559}
   - component: {fileID: 8003041633358554544}
-  - component: {fileID: -4827700639380689687}
+  - component: {fileID: -3541351067959810151}
   m_Layer: 0
-  m_Name: PosionFish
+  m_Name: shrimp
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -5
-  damage: 1
+  damage: -1
   isPoison: 1
 --- !u!54 &8003041633358554544
 Rigidbody:
@@ -80,7 +80,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 32
   m_CollisionDetection: 0
---- !u!212 &-4827700639380689687
+--- !u!212 &-3541351067959810151
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d02d04623cb53e846ae7636f16a710d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3d26392a5b73594bad0b02a42c6e99a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

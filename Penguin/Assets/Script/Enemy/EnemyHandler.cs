@@ -26,7 +26,7 @@ public class EnemyHandler : MonoBehaviour
     
     // Move Pattern
     public List<MovePattern> Patterns;
-    
+
     private void Start()
     {
         attackTimer = attackTimerMax;

@@ -170,6 +170,7 @@ MonoBehaviour:
   _EnemyContainer: {fileID: 11400000, guid: d525f28db4736ac41a4154af74278b20, type: 2}
   _BulletSpawner: {fileID: 303695652}
   maxCount: 5
+  item: {fileID: 8003041633358554558, guid: b89e88fc0b795554b992cb12668629e9, type: 3}
 --- !u!1 &303695651
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,18 +666,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5173394705334789912, guid: 02324af02c2608f4a99c76c2bcdc143c, type: 3}
-      propertyPath: maxVec.x
-      value: 8.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 5173394705334789912, guid: 02324af02c2608f4a99c76c2bcdc143c, type: 3}
-      propertyPath: minVec.x
-      value: -8.88
+    - target: {fileID: 5173394705334789913, guid: 02324af02c2608f4a99c76c2bcdc143c, type: 3}
+      propertyPath: shotDelayMax
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5173394705334789913, guid: 02324af02c2608f4a99c76c2bcdc143c, type: 3}
       propertyPath: _BulletSpawner
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1969684413}
     - target: {fileID: 5173394705334789923, guid: 02324af02c2608f4a99c76c2bcdc143c, type: 3}
       propertyPath: m_Name
       value: Player

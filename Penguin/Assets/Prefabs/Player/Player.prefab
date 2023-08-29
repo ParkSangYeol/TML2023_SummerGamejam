@@ -62,6 +62,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  minVec: {x: -8.88, y: 0, z: 0}
+  maxVec: {x: 8.88, y: 0, z: 0}
 --- !u!114 &5173394705334789913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +76,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1a2c95927e3bd4382f74edb8cf1c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numOfBullets: 0
   maxHP: 5
   noHitTime: 2
   _stateChageEvent:
@@ -87,6 +88,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _onHitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _onBulletsChangeEvent:
     m_PersistentCalls:
       m_Calls: []
   _PlayerStateContainer: {fileID: 11400000, guid: ecf46d9b9ef1fe246b68706ccf5a29ef, type: 2}

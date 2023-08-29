@@ -189,7 +189,12 @@ public class PlayerManager : Singleton<PlayerManager>
         if (other.tag.Equals("EnemyBullet"))
         {
             BulletHandler handler = other.GetComponent<BulletHandler>();
-            if (_currentState._isGetDamage)
+
+            if (handler.damage > 0)
+            {
+                hp -= handler.damage;
+            }
+            else if (_currentState._isGetDamage)
             {
                 // 데이미지를 받는 경우
                 _onHitEvent.Invoke();
@@ -276,5 +281,6 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         Time.timeScale = 0;
     }
+    
     #endregion
 }

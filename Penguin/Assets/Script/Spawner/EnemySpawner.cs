@@ -8,6 +8,10 @@ public class EnemySpawner : MonoBehaviour
     public BulletSpawner _BulletSpawner;
     public int maxCount;
     int count = 0;
+    
+    // Item Prefab
+    public GameObject item;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +54,16 @@ public class EnemySpawner : MonoBehaviour
             
             // 플레이어의 점수를 갱신
             PlayerManager.Instance.point += enemyData.point;
+        });
+        handler.OnDestroyEvent.AddListener(() =>
+        {
+            float randomNum = UnityEngine.Random.Range(0, 1f);
+            Debug.Log("random num:" + randomNum);
+            if (randomNum <= 0.1f)
+            {
+                // spawn item
+                Instantiate(item, spawnObj.transform.position, Quaternion.identity);
+            }
         });
         count++;
     }
