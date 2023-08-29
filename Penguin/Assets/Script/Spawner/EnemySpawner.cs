@@ -14,7 +14,9 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private AudioClip _monsterDeadSFX;
     [SerializeField] private AudioClip _monsterSpawnSFX;
-    
+    [SerializeField] private AudioClip _gameClearBGM;
+
+    public PlayerManager playerManager;
     // Item Prefab
     public GameObject item;
     
@@ -66,7 +68,7 @@ public class EnemySpawner : MonoBehaviour
             count--;
             
             // 플레이어의 점수를 갱신
-            PlayerManager.Instance.point += enemyData.point;
+            playerManager.point += enemyData.point;
         });
         handler.OnDestroyEvent.AddListener(() =>
         {
@@ -98,12 +100,12 @@ public class EnemySpawner : MonoBehaviour
         handler.OnDestroyEvent.AddListener(() =>
         {
             // 플레이어의 점수를 갱신
-            PlayerManager.Instance.point += bossData.point;
+            playerManager.point += bossData.point;
         });
         handler.OnDestroyEvent.AddListener(() =>
         {
             // 보스 처치
-            // TODO
+            SFXManager.Instance.PlayLoop(_gameClearBGM);
         });
     }
 }

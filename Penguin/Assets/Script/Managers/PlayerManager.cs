@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerManager : Singleton<PlayerManager>
+public class PlayerManager : MonoBehaviour
 {
     // 내부 변수
     private int NUM_OF_BULLETS;
@@ -190,6 +190,11 @@ public class PlayerManager : Singleton<PlayerManager>
         // set default value
         numOfBullets = 10;
         hp = maxHP;
+        this._BulletSpawner = GameObject.Find("PlayerBulletSpawner").GetComponent<BulletSpawner>();
+        
+        this.GetComponent<Animator>().SetBool("isDead", false);
+        this.GetComponent<Animator>().SetTrigger("Reset");
+        
         _currentState = _PlayerStateContainer.PlayerStates["DefenceState"];
         StartCoroutine(ChangeAttackDelay(maxDefenceTime));
     }

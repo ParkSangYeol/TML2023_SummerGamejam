@@ -11,10 +11,12 @@ public class HealthManager : MonoBehaviour
     public GameObject Heart4;
     public GameObject Heart5;
 
+    public PlayerManager playerManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        PlayerManager.Instance._onHpChangeEvent.AddListener(fillHeart);
+        playerManager._onHpChangeEvent.AddListener(fillHeart);
     }
 
     // Update is called once per frame

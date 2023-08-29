@@ -7,10 +7,12 @@ public class IconChange : MonoBehaviour
     public GameObject AtkIcon;
     public GameObject DefIcon;
 
+    public PlayerManager playerManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        PlayerManager.Instance._stateChageEvent.AddListener(ChangingIcon);
+        playerManager._stateChageEvent.AddListener(ChangingIcon);
     }
 
     // Update is called once per frame

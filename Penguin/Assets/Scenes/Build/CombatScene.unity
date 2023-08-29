@@ -324,6 +324,14 @@ PrefabInstance:
       value: EnemySpawner
       objectReference: {fileID: 0}
     - target: {fileID: 2465819367065272787, guid: b92451d69cb95bc4fb80aed34db62ef5, type: 3}
+      propertyPath: _gameClearBGM
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a4446fd2a7f9354bafb2732c18a21a7, type: 3}
+    - target: {fileID: 2465819367065272787, guid: b92451d69cb95bc4fb80aed34db62ef5, type: 3}
+      propertyPath: playerManager
+      value: 
+      objectReference: {fileID: 1157390031}
+    - target: {fileID: 2465819367065272787, guid: b92451d69cb95bc4fb80aed34db62ef5, type: 3}
       propertyPath: _BulletSpawner
       value: 
       objectReference: {fileID: 995631199}
@@ -524,6 +532,10 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1273407735}
+    - target: {fileID: 623783461956631153, guid: 653bd660d6d7cab4fbaaff54b002d153, type: 3}
+      propertyPath: playerManager
+      value: 
+      objectReference: {fileID: 1157390031}
     - target: {fileID: 623783461956631154, guid: 653bd660d6d7cab4fbaaff54b002d153, type: 3}
       propertyPath: m_Name
       value: BoardManager
@@ -536,10 +548,18 @@ PrefabInstance:
       propertyPath: DefIcon
       value: 
       objectReference: {fileID: 1273407732}
+    - target: {fileID: 623783461956631156, guid: 653bd660d6d7cab4fbaaff54b002d153, type: 3}
+      propertyPath: playerManager
+      value: 
+      objectReference: {fileID: 1157390031}
     - target: {fileID: 623783461956631157, guid: 653bd660d6d7cab4fbaaff54b002d153, type: 3}
       propertyPath: GMPanel
       value: 
       objectReference: {fileID: 1273407733}
+    - target: {fileID: 623783461956631157, guid: 653bd660d6d7cab4fbaaff54b002d153, type: 3}
+      propertyPath: playerManager
+      value: 
+      objectReference: {fileID: 1157390031}
     - target: {fileID: 623783461956631158, guid: 653bd660d6d7cab4fbaaff54b002d153, type: 3}
       propertyPath: Heart1
       value: 
@@ -560,10 +580,18 @@ PrefabInstance:
       propertyPath: Heart5
       value: 
       objectReference: {fileID: 1273407736}
+    - target: {fileID: 623783461956631158, guid: 653bd660d6d7cab4fbaaff54b002d153, type: 3}
+      propertyPath: playerManager
+      value: 
+      objectReference: {fileID: 1157390031}
     - target: {fileID: 623783461956631159, guid: 653bd660d6d7cab4fbaaff54b002d153, type: 3}
       propertyPath: FishBoneText
       value: 
       objectReference: {fileID: 1273407734}
+    - target: {fileID: 623783461956631159, guid: 653bd660d6d7cab4fbaaff54b002d153, type: 3}
+      propertyPath: playerManager
+      value: 
+      objectReference: {fileID: 1157390031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 653bd660d6d7cab4fbaaff54b002d153, type: 3}
 --- !u!1001 &995631198
@@ -632,6 +660,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b86a3d893390ff746ab9f7c5af340fb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1157390031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5173394705334789913, guid: 02324af02c2608f4a99c76c2bcdc143c, type: 3}
+  m_PrefabInstance: {fileID: 131337284}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1a2c95927e3bd4382f74edb8cf1c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1256530998

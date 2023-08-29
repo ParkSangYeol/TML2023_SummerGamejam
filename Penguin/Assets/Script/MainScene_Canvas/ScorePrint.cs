@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class ScorePrint : MonoBehaviour
 {
     public Text scoreText;
+
+    public PlayerManager playerManager;
     // Start is called before the first frame update
     void Start()
     {
-        PlayerManager.Instance._onChangePoint.AddListener(PointPrint);
+        playerManager._onChangePoint.AddListener(PointPrint);
     }
 
     // Update is called once per frame

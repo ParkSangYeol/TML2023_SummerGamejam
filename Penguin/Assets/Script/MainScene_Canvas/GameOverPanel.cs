@@ -7,10 +7,12 @@ using UnityEngine.SceneManagement;
 public class GameOverPanel : MonoBehaviour
 {
     public GameObject GMPanel;
+
+    public PlayerManager playerManager;
     // Start is called before the first frame update
     void Start()
     {
-        PlayerManager.Instance._onDeadEvent.AddListener(GameOverPanelOn);
+        playerManager._onDeadEvent.AddListener(GameOverPanelOn);
     }
 
     // Update is called once per frame

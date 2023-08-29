@@ -73,7 +73,10 @@ public class EnemyHandler : MonoBehaviour
 
     private void OnDestroy()
     {
-        OnDestroyEvent.Invoke();
+        if (Time.timeScale != 0)
+        {
+            OnDestroyEvent.Invoke();
+        }
     }
 
     IEnumerator MovePatternRoutine()
