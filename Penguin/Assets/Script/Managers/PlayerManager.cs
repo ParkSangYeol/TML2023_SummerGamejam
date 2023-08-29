@@ -38,7 +38,7 @@ public class PlayerManager : Singleton<PlayerManager>
                     _onHpChangeEvent.Invoke(HP);
                 }
 
-                if (value < 0)
+                if (value <= 0)
                 {
                     _onDeadEvent.Invoke();
                 }
