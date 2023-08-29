@@ -8,7 +8,7 @@ public class EnemyContainer : SerializedScriptableObject
 {
     public List<EnemyData> enemies;
 
-    public GameObject GetRandomEnemy()
+    public EnemyData GetRandomEnemy()
     {
         float probRange = 0;
         foreach (var enemy in enemies)
@@ -26,7 +26,7 @@ public class EnemyContainer : SerializedScriptableObject
             }
             else
             {
-                return enemy.Enemy;
+                return enemy;
             }
         }
 

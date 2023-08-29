@@ -38,12 +38,18 @@ public class EnemySpawner : MonoBehaviour
     {
         Vector3 pos = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.0f, 1.0f), 0.95f, 0));
         pos.z = 0.0f;
-        var spawnObj = Instantiate(_EnemyContainer.GetRandomEnemy(), pos, Quaternion.identity);
+
+        EnemyData enemyData = _EnemyContainer.GetRandomEnemy();
+        var spawnObj = Instantiate(enemyData.Enemy, pos, Quaternion.identity);
         EnemyHandler handler = spawnObj.GetComponent<EnemyHandler>();
         handler.bulletSpawner = _BulletSpawner;
         handler.OnDestroyEvent.AddListener(() =>
         {
+            // 현재 생성된 적의 수를 1 줄임
             count--;
+            
+            // 플레이어의 점수를 갱신
+            PlayerManager.Instance.point += enemyData.point;
         });
         count++;
     }
