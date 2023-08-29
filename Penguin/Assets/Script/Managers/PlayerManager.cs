@@ -82,6 +82,7 @@ public class PlayerManager : Singleton<PlayerManager>
     public UnityEvent _onHitEvent;
     public UnityEvent<int> _onBulletsChangeEvent;
     public UnityEvent<int> _onChangePoint;
+    public UnityEvent _onAttack;
 
     // Scriptable Object
     public PlayerStateContainer _PlayerStateContainer;
@@ -104,6 +105,20 @@ public class PlayerManager : Singleton<PlayerManager>
     // Player 발사 반복 횟수
     public int iterTime;
     
+    // AudioClips
+    [SerializeField] 
+    private AudioClip _attackSFX;
+    [SerializeField] 
+    private AudioClip _hitSFX;
+    [SerializeField] 
+    private AudioClip _deadSFX;
+    [SerializeField] 
+    private AudioClip _stateChageSFX;
+    [SerializeField] 
+    private AudioClip _healSFX;
+    [SerializeField] 
+    private AudioClip _getSFX;
+
     public PlayerState _currentState
     {
         set
@@ -146,8 +161,23 @@ public class PlayerManager : Singleton<PlayerManager>
             this.GetComponent<Animator>().SetTrigger("Die");
             this.GetComponent<SpriteRenderer>().color = Color.white;
         });
-       
-
+        _onAttack.AddListener(() =>
+        {
+            SFXManager.Instance.PlayOneShot(_attackSFX);
+        });
+        _onHitEvent.AddListener(() =>
+        {
+            SFXManager.Instance.PlayOneShot(_hitSFX);
+        });
+        _onDeadEvent.AddListener(() =>
+        {
+            SFXManager.Instance.PlayOneShot(_deadSFX);
+        });
+        _stateChageEvent.AddListener( state =>
+        {
+            SFXManager.Instance.PlayOneShot(_stateChageSFX);
+        });
+        
         // set default value
         stateChangeDelay = 0f;
         shootDelay = 0f;
@@ -199,6 +229,7 @@ public class PlayerManager : Singleton<PlayerManager>
             if (handler.damage < 0)
             {
                 hp -= handler.damage;
+                SFXManager.Instance.PlayOneShot(_healSFX);
             }
             else if (_currentState._isGetDamage)
             {
@@ -224,6 +255,7 @@ public class PlayerManager : Singleton<PlayerManager>
                     else
                     {
                         // 방어 상태인 경우
+                        SFXManager.Instance.PlayOneShot(_getSFX);
                         ++numOfBullets;
                         Debug.Log(numOfBullets);
                     }
@@ -240,7 +272,7 @@ public class PlayerManager : Singleton<PlayerManager>
     private void Shoot()
     {
         _BulletSpawner.BulletSpawn(this.transform.position, Quaternions, iterTime, shootDelay);
-        Debug.Log("플레이어 총알 발사!");
+        _onAttack.Invoke();
         shootDelay = shotDelayMax;
     }
     

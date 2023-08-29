@@ -11,6 +11,9 @@ public class EnemySpawner : MonoBehaviour
     public BulletSpawner _bossBulletSpawner;
     public int maxCount;
     int count = 0;
+
+    [SerializeField] private AudioClip _monsterDeadSFX;
+    [SerializeField] private AudioClip _monsterSpawnSFX;
     
     // Item Prefab
     public GameObject item;
@@ -50,6 +53,11 @@ public class EnemySpawner : MonoBehaviour
 
         EnemyData enemyData = _EnemyContainer.GetRandomEnemy();
         var spawnObj = Instantiate(enemyData.Enemy, pos, Quaternion.identity);
+        
+        // 생성 사운드 출력
+        SFXManager.Instance.PlayOneShot(_monsterSpawnSFX);
+        
+        // 이벤트 설정
         EnemyHandler handler = spawnObj.GetComponent<EnemyHandler>();
         handler.bulletSpawner = _BulletSpawner;
         handler.OnDestroyEvent.AddListener(() =>
@@ -70,6 +78,7 @@ public class EnemySpawner : MonoBehaviour
                 Instantiate(item, spawnObj.transform.position, Quaternion.identity);
             }
         });
+        handler.OnDestroyEvent.AddListener(() => SFXManager.Instance.PlayOneShot(_monsterDeadSFX));
         count++;
     }
 
@@ -80,6 +89,10 @@ public class EnemySpawner : MonoBehaviour
 
         EnemyData bossData = _bossContainer.GetRandomEnemy();
         var spawnObj = Instantiate(bossData.Enemy, pos, Quaternion.identity);
+        
+        // 생성 사운드 출력
+        SFXManager.Instance.PlayLoop(bossData._spawnSFX);
+        
         BossHandler handler = spawnObj.GetComponent<BossHandler>();
         handler.bulletSpawner = _bossBulletSpawner;
         handler.OnDestroyEvent.AddListener(() =>

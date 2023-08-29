@@ -8,4 +8,5 @@ public class EnemyData : ScriptableObject
     public GameObject Enemy;
     public float prob;
     public int point;
+    public AudioClip _spawnSFX;
 }

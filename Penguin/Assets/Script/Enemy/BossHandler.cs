@@ -67,6 +67,7 @@ public class BossHandler : MonoBehaviour
     public void Shoot(int patternIndex)
     {
         ShootPattern pattern = shootPatterns[patternIndex];
+        SFXManager.Instance.PlayOneShot(pattern._attackSFX);
         bulletSpawner.BulletSpawn(this.transform.position, pattern.quaternions, pattern.iterTime, pattern.shootDelay);
     }
 

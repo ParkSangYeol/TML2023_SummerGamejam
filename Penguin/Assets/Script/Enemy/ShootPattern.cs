@@ -17,4 +17,7 @@ public class ShootPattern : SerializedScriptableObject
     
     // 트리거 이름
     public string triggerName;
+    
+    // AudioCLip
+    public AudioClip _attackSFX;
 }
